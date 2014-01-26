@@ -1,0 +1,125 @@
+.whack-a-mole-container {
+  width: 720px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  background-color: black;
+  font-family: Courier New;
+  font-size: 34px;
+  cursor: none;
+     
+  user-select: none;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+         
+  .hammer {
+    width: 66px;
+    height: 47px;
+    background: url("/assets/whack-a-mole/hammer.png") no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+  }
+  
+  .hammer.rotated {
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+  }
+   
+  .text {
+    color: white;
+    float: left;
+  }
+
+  .stat {
+    color: yellow;
+    float: left;
+    margin-left: 10px;
+  }
+   
+  .global-stat-bar {
+    width: 100%;
+    height: 35px;
+    
+    .high-score {
+      width: 40%;
+      float: left;
+    }
+    
+    .difficulty {
+      width: 60%;
+      float: right;
+      
+      .text, .stat {
+        float: right;
+      }
+    }
+  }
+
+  .whack-stat, .time-stat {
+      clear: left;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 8px;
+      height: 35px;
+  }
+  
+  .whack-stat {
+    width: 360px;
+  }
+  
+  .time-stat {
+    width: 160px;
+  }
+  
+  .grass {
+    width: 649px;
+    height: 334px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background: url("/assets/whack-a-mole/grass.png") no-repeat;
+    clear: left;
+    padding-top: 5px;
+    
+    .hole-row {
+      clear: left;
+      width: 100%;
+      margin-top: 50px;
+      margin-left: 8px;
+      height: 17px;
+      
+      .hole {
+        width: 121px;
+        height: 17px;
+        background: url("/assets/whack-a-mole/hole.png") no-repeat;
+        margin-left: 30px;
+        float: left;
+        
+        .text {
+          font-size: 20px;
+          text-align: center;
+          width: 121px;
+          margin-top: 10px;
+          display: none;
+        }
+        
+        .mole {
+          width: 88px;
+          height: 44px;
+          background: url("/assets/whack-a-mole/mole.png") no-repeat;
+          margin-top: -32px;
+          margin-left: 15px;
+          display: none;
+        }
+      }
+    }
+  }
+}

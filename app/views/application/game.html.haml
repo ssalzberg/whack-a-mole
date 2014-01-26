@@ -1,0 +1,67 @@
+.whack-a-mole-container
+  %audio{:id => "choose_difficulty", :src => "/audio/whack-a-mole/choose_difficulty.wav", :preload => "auto"}
+  %audio{:id => "game", :src => "/audio/whack-a-mole/game.wav", :preload => "auto"}
+  %audio{:id => "whacked", :src => "/audio/whack-a-mole/whacked.wav", :preload => "auto"}
+  %audio{:id => "buzzer", :src => "/audio/whack-a-mole/buzzer.wav", :preload => "auto"}
+  
+  .hammer 
+  .global-stat-bar
+    .high-score
+      .text HI-SCORE:
+      .stat 000
+    .difficulty
+      .stat EASY
+      .text DIFFICULTY:
+  .whack-stat
+    .text MOLES WHACKED:
+    .stat 000
+  .time-stat
+    .text TIME:
+    .stat --
+  .grass
+    .hole-row
+      .hole
+        .mole
+      .hole
+        .mole
+      .hole
+        .mole
+      .hole
+        .mole
+    .hole-row
+      .hole
+        .mole
+      .hole
+        .mole
+      .hole
+        .mole
+      .hole
+        .mole
+    .hole-row
+      .hole.difficulty
+        .mole
+        .text EASY
+      .hole.difficulty
+        .mole
+        .text MEDIUM
+      .hole.difficulty
+        .mole
+        .text HARD
+      .hole.difficulty
+        .mole
+        .text VERY HARD
+    .hole-row
+      .hole
+        .mole
+      .hole
+        .mole
+      .hole
+        .mole
+      .hole
+        .mole
+
+:javascript
+  var game = null;
+  $(document).ready(function() {
+    game = new WhackAMole.Game();
+  })
